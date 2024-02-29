@@ -1,0 +1,76 @@
+<!-- view/index.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+
+
+        <style>
+            body {
+                background-color: #B5C0D0; 
+                font-family: 'Arial', sans-serif;
+            }
+    
+            .container {
+                background-color: #CCD3CA; 
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 50px;
+            }
+    
+            #text {
+                width: 100%;
+                height: 200px;
+                padding: 10px;
+                border: 1px solid #F5E8DD; 
+                border-radius: 5px;
+                outline: none;
+                margin-top: 20px; 
+                resize: none;
+            }
+    
+            .btn-primary {
+                margin-top: 20px; 
+            }
+
+            .btn {
+                background-color: #007bff; 
+                border: none;
+                border-radius: 5px; 
+                color: #ffffff; 
+                padding: 10px 20px; 
+                cursor: pointer; 
+                transition: background-color 0.3s; 
+            }
+    
+            .btn:hover {
+                background-color: #0056b3; 
+            }
+        </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <hr>
+        <form action="/scan" method="POST" class="form">
+            <textarea name="text" id="text" cols="150" rows="10" placeholder="Enter URL or Text" required></textarea>
+            <button type="submit" class="btn btn-primary">Generate QR Code</button>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
